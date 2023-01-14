@@ -1,0 +1,56 @@
+/* ...............Main Container Related CSS........................ */
+.container {
+  /* border: 1px solid red; */
+  height: 5rem;
+  display: flex;
+  align-items: flex-end;
+}
+/* ...............Search Bar Container Related CSS........................ */
+.search_bar_container {
+  /* border: 1px solid red; */
+  width: 30%;
+  margin: 2rem auto auto auto;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+/* ...............Search Input Related CSS........................ */
+.search_bar_container input {
+  border: none;
+  border-bottom: 2px solid rgb(232, 233, 233);
+  width: 16rem;
+  outline: none;
+  height: 2rem;
+}
+/* ...............Search Button Related CSS........................ */
+.search_bar_container button {
+  width: 2.5rem;
+  height: 2rem;
+  background-color: rgb(151, 146, 146);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+/* ...............Filter Icons Related CSS........................ */
+.filter_icon {
+  display: none;
+}
+/* ...............Media queries(Small Device)........................ */
+@media screen and (max-width: 600px) {
+  .container {
+    height: 4rem;
+  }
+  .search_bar_container {
+    width: 100%;
+    margin: 1rem auto auto auto;
+    gap: 1rem;
+  }
+  .filter_icon {
+    display: inline;
+  }
+  .search_bar_container button {
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+}
