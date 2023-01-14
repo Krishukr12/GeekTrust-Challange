@@ -1,0 +1,30 @@
+.main_container {
+  /* border: 1px solid red; */
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-top: 1rem;
+}
+.product_image {
+  height: 80%;
+  width: 65px;
+  /* padding-left: 0.5rem;
+  padding-top: 0.5rem; */
+  border-radius: 10px;
+  /* border: 1px solid red; */
+  margin-top: 3px;
+  margin-left: 4px;
+}
+.delete_button {
+  /* border: 1px solid red; */
+  height: 1.9rem;
+  width: 4rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(129, 124, 124);
+  cursor: pointer;
+  margin-top: 0.7rem;
+}

@@ -6,7 +6,8 @@ import {
 import thunk from "redux-thunk";
 import { Reducer } from "./reducer";
 const intialState = {
-  products: ["Krishan"],
+  products: [],
+  cartProducts: [],
 };
 export const store = createStore(
   Reducer,

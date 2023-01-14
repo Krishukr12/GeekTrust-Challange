@@ -1,27 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import classes from "../Products/Products.module.css";
 import { ProductCard } from "../../components/Product Card/ProductCard";
-
+import { getProducts } from "../../redux/action";
+import { useDispatch, useSelector } from "react-redux";
 export const Products = () => {
-  const [products, setProducts] = useState([]);
+  const products = useSelector((state) => state.products);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    getData();
-  }, []);
-  const getData = async () => {
-    await fetch(
-      "https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/catalogue.json",
-      {
-        method: "GET", // or 'PUT'
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
+    //GET PRODUCTS FUNCTION
+    getProducts(dispatch);
+  });
+
   return (
     <div className={classes.main_container}>
       <div className={classes.sortFilter_container}>
@@ -62,7 +52,7 @@ export const Products = () => {
       </div>
       <div className={classes.products_container}>
         {products.length
-          ? products.map((item) => <ProductCard data={item} />)
+          ? products.map((item) => <ProductCard key={item.id} data={item} />)
           : null}
       </div>
     </div>

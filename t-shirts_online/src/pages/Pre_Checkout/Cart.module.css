@@ -1,0 +1,31 @@
+.main_container {
+  /* border: 1px solid red; */
+  height: 80vh;
+}
+.title {
+  /* border: 1px solid red; */
+  height: 3rem;
+  margin-top: 2rem;
+}
+.title p {
+  /* border: 1px solid red; */
+  /* height: 3rem; */
+  margin-left: 10rem;
+  padding-top: 0.5rem;
+  width: max-content;
+}
+.cart_products_container {
+  margin-left: 10rem;
+  height: 23rem;
+  width: 20rem;
+  margin-top: 2rem;
+  overflow: scroll;
+  border-bottom: 2px solid rgb(129, 124, 124);
+}
+.total_amount {
+  margin-left: 10rem;
+  height: 2rem;
+  width: 20rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
