@@ -1,19 +1,18 @@
+/* ...............MAIN CONTAINER CSS........................ */
+
 .main_container {
-  /* border: 1px solid red; */
   height: 80vh;
 }
 .title {
-  /* border: 1px solid red; */
   height: 3rem;
   margin-top: 2rem;
 }
 .title p {
-  /* border: 1px solid red; */
-  /* height: 3rem; */
   margin-left: 10rem;
   padding-top: 0.5rem;
   width: max-content;
 }
+/* ...............Product Container related css........................ */
 .cart_products_container {
   margin-left: 10rem;
   height: 23rem;
@@ -22,10 +21,24 @@
   overflow: scroll;
   border-bottom: 2px solid rgb(129, 124, 124);
 }
+/* ...............TOTAL AMOUNT RELATED CSS........................ */
 .total_amount {
   margin-left: 10rem;
   height: 2rem;
   width: 20rem;
   text-align: center;
   margin-top: 0.5rem;
+}
+
+/* ...............Media queries(Small Device)........................ */
+@media screen and (max-width: 600px) {
+  .cart_products_container {
+    margin: auto;
+    width: 90%;
+    height: 28rem;
+  }
+  .total_amount {
+    margin: auto;
+    margin-top: 1rem;
+  }
 }

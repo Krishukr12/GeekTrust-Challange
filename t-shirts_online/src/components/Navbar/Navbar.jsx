@@ -6,7 +6,9 @@ export const Navbar = () => {
   return (
     <div className={classes.nav_container}>
       <div className={classes.cart}>
-        <p>TeeRex Store</p>
+        <Link to="/">
+          <p>TeeRex Store</p>
+        </Link>
       </div>
       <div className={classes.cart}>
         <Link className={classes.products_link} to="/">

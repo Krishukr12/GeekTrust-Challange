@@ -1,3 +1,4 @@
+/* ...............Main Card Container related css........................ */
 .card {
   width: 200px;
   height: 254px;
@@ -9,6 +10,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+/* ...............Image Container related css........................ */
 .card_img {
   background-color: #ffcaa6;
   height: 40%;
@@ -16,7 +18,7 @@
   border-radius: 0.5rem;
   transition: 0.3s ease;
 }
-
+/* ...............Difference Portion of Card related css........................ */
 .card_info {
   padding-top: 10%;
 }
@@ -29,6 +31,7 @@ svg {
   height: 20px;
 }
 
+/* ...............Card Footer Related Css........................ */
 .card_footer {
   width: 100%;
   display: flex;
@@ -38,12 +41,13 @@ svg {
   border-top: 1px solid #ddd;
 }
 
-/*Text*/
+/* ...............Title of App related Css........................ */
 .text_title {
   font-weight: 900;
   font-size: 1.2em;
   line-height: 1.5;
 }
+/* ...............Text Body related css........................ */
 
 .text_body {
   font-size: 0.9em;

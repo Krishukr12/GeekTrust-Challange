@@ -1,6 +1,9 @@
 import React from "react";
 import classes from "../Singel Cart Products/SingelProductCard.module.css";
 export const SingelProductCard = ({ data }) => {
+  const handleDelete = () => {
+    alert(data.id);
+  };
   return (
     <div className={classes.main_container}>
       <img
@@ -24,7 +27,9 @@ export const SingelProductCard = ({ data }) => {
         <option>Qty: 9</option>
         <option>Qty: 10</option>
       </select>
-      <button className={classes.delete_button}>Delete</button>
+      <button onClick={handleDelete} className={classes.delete_button}>
+        Delete
+      </button>
     </div>
   );
 };

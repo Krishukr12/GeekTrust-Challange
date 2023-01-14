@@ -1,8 +1,10 @@
+/* ...............Main Container Related Css........................ */
 .main_container {
   /* border: 1px solid red; */
   height: 80vh;
   display: flex;
 }
+/* ..............Filter Container Related css........................ */
 .sortFilter_container {
   /* border: 1px solid red; */
   width: 15%;
@@ -11,6 +13,7 @@
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   padding: 0.625rem 0.625rem 0.625rem 0.625rem;
 }
+/* ...............Products Container Related css........................ */
 .products_container {
   height: 30rem;
   /* border: 1px solid red; */
@@ -22,7 +25,6 @@
   justify-content: center;
   justify-items: center;
   gap: 1rem;
-
   padding: 2rem 0 2rem 0;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
