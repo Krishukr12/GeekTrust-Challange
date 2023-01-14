@@ -9,7 +9,7 @@ export const Navbar = () => {
         <p>TeeRex Store</p>
       </div>
       <div className={classes.cart}>
-        <Link className={classes.products_link} to="/products">
+        <Link className={classes.products_link} to="/">
           Products
         </Link>
         <Link to="/cart">
