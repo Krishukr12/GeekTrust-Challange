@@ -1,0 +1,46 @@
+.main_container {
+  /* border: 1px solid red; */
+  height: 80vh;
+  display: flex;
+}
+.sortFilter_container {
+  /* border: 1px solid red; */
+  width: 15%;
+  margin: 2rem auto auto auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+}
+.products_container {
+  height: 30rem;
+  /* border: 1px solid red; */
+  width: 65%;
+  margin: 2rem auto auto auto;
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: repeat(3, 14rem);
+  justify-content: center;
+  justify-items: center;
+  gap: 1rem;
+  padding: 2rem 0 2rem 0;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+section {
+  margin-top: 0.3rem;
+}
+
+/* ...............Media queries(Small Device)........................ */
+@media screen and (max-width: 600px) {
+  .sortFilter_container {
+    display: none;
+  }
+  .products_container {
+    height: 100vh;
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: 0.5rem auto auto auto;
+    grid-template-columns: repeat(1, 14rem);
+    gap: 1.5rem;
+  }
+}
