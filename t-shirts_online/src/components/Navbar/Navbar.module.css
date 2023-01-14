@@ -1,0 +1,40 @@
+/* ......................NAVBAR MAIN CONTAINER RELATED CSS .......................*/
+.nav_container {
+  height: 3rem;
+  background-color: rgb(241, 240, 240);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  text-decoration: inherit;
+}
+/* ......................CART RELATED CSS .......................*/
+.cart {
+  /* border: 1px solid red; */
+  width: 20rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  gap: 2rem;
+  padding-top: 0.8rem;
+}
+/* ......................CART ICONS RELATED CSS .......................*/
+.cartIcons {
+  padding-top: 0;
+  margin-top: -0.1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* ...............Media queries(Small Device)........................ */
+@media screen and (max-width: 600px) {
+  .products_link {
+    display: none;
+  }
+  .cart {
+    width: 9rem;
+  }
+  .cartIcons {
+    margin-left: 3.5rem;
+  }
+}
