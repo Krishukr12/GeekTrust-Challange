@@ -4,6 +4,8 @@ import {
   GET_CARD_PRODUCTS,
   GET_PRODUCTS,
   SEARCH_PRODUCTS,
+  TOTAL_CART_PRICE_DEC,
+  TOTAL_CART_PRICE_INC,
 } from "./actionType";
 
 export const Reducer = (state, { type, payload }) => {
@@ -37,6 +39,18 @@ export const Reducer = (state, { type, payload }) => {
       return {
         ...state,
         cartProducts: payload,
+      };
+    }
+    case TOTAL_CART_PRICE_INC: {
+      return {
+        ...state,
+        totolCartPrice: state.totolCartPrice + payload,
+      };
+    }
+    case TOTAL_CART_PRICE_DEC: {
+      return {
+        ...state,
+        totolCartPrice: state.totolCartPrice - payload,
       };
     }
     default: {

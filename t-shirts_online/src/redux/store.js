@@ -10,6 +10,7 @@ const intialState = {
   cartProducts: [],
   searchProducts: [],
   cartProductsCount: 0,
+  totolCartPrice: 0,
 };
 export const store = createStore(
   Reducer,
