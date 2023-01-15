@@ -45,9 +45,9 @@ export const getProducts = async (dispatch) => {
 
 //GET CART PRODUCTS FUNCTION
 
-export const getCartProducts = () => {
+export const getCartProducts = (data) => {
   return {
     type: GET_CARD_PRODUCTS,
-    payload: arr,
+    payload: data,
   };
 };

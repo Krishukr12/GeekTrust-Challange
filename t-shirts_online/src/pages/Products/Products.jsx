@@ -10,7 +10,7 @@ export const Products = () => {
   useEffect(() => {
     //GET PRODUCTS FUNCTION
     getProducts(dispatch);
-  });
+  }, []);
 
   return (
     <div className={classes.main_container}>

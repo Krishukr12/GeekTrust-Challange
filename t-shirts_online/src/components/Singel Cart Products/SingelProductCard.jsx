@@ -1,8 +1,14 @@
 import React from "react";
 import classes from "../Singel Cart Products/SingelProductCard.module.css";
+import { useDispatch } from "react-redux";
+import { DELETE_CART_PRODUCT } from "../../redux/actionType";
 export const SingelProductCard = ({ data }) => {
-  const handleDelete = () => {
-    alert(data.id);
+  const dispatch = useDispatch();
+  const handleDelete = async () => {
+    let arr = await JSON.parse(localStorage.getItem("cart"));
+    let afterDeleteData = arr.filter((item) => item.id !== data.id);
+    localStorage.setItem("cart", JSON.stringify(afterDeleteData));
+    dispatch({ type: DELETE_CART_PRODUCT, payload: afterDeleteData });
   };
   return (
     <div className={classes.main_container}>

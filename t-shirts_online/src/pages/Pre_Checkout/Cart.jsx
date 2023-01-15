@@ -7,8 +7,12 @@ export const Cart = () => {
   const dispatch = useDispatch();
   const cartProducts = useSelector((state) => state.cartProducts);
   useEffect(() => {
-    dispatch(getCartProducts());
-  });
+    const get = async () => {
+      let arr = (await JSON.parse(localStorage.getItem("cart"))) || [];
+      return dispatch(getCartProducts(arr));
+    };
+    get();
+  }, []);
 
   return (
     <div className={classes.main_container}>
