@@ -8,6 +8,7 @@ import { Reducer } from "./reducer";
 const intialState = {
   products: [],
   cartProducts: [],
+  searchProducts: [],
 };
 export const store = createStore(
   Reducer,

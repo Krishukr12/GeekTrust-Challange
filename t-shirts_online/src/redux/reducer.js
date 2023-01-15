@@ -2,6 +2,7 @@ import {
   DELETE_CART_PRODUCT,
   GET_CARD_PRODUCTS,
   GET_PRODUCTS,
+  SEARCH_PRODUCTS,
 } from "./actionType";
 
 export const Reducer = (state, { type, payload }) => {
@@ -10,6 +11,12 @@ export const Reducer = (state, { type, payload }) => {
       return {
         ...state,
         products: payload,
+      };
+    }
+    case SEARCH_PRODUCTS: {
+      return {
+        ...state,
+        searchProducts: payload,
       };
     }
     case DELETE_CART_PRODUCT: {

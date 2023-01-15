@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "../Products/Products.module.css";
 import { ProductCard } from "../../components/Product Card/ProductCard";
 import { getProducts } from "../../redux/action";
 import { useDispatch, useSelector } from "react-redux";
 export const Products = () => {
-  const products = useSelector((state) => state.products);
   const dispatch = useDispatch();
+  const products = useSelector((state) => state.products);
+  const searchProducts = useSelector((state) => state.searchProducts);
+  let data = searchProducts.length > 0 ? searchProducts : products;
 
   useEffect(() => {
     //GET PRODUCTS FUNCTION
@@ -51,8 +53,8 @@ export const Products = () => {
         </section>
       </div>
       <div className={classes.products_container}>
-        {products.length
-          ? products.map((item) => <ProductCard key={item.id} data={item} />)
+        {data.length
+          ? data.map((item) => <ProductCard key={item.id} data={item} />)
           : null}
       </div>
     </div>

@@ -7,11 +7,12 @@ export const Cart = () => {
   const dispatch = useDispatch();
   const cartProducts = useSelector((state) => state.cartProducts);
   useEffect(() => {
-    const get = async () => {
-      let arr = (await JSON.parse(localStorage.getItem("cart"))) || [];
-      return dispatch(getCartProducts(arr));
+    const getInitialProducts = async () => {
+      let intialProducts =
+        (await JSON.parse(localStorage.getItem("cart"))) || [];
+      return dispatch(getCartProducts(intialProducts));
     };
-    get();
+    getInitialProducts();
   }, []);
 
   return (

@@ -18,8 +18,12 @@
   height: 23rem;
   width: 20rem;
   margin-top: 2rem;
-  overflow: scroll;
+  overflow: hidden;
+  overflow-y: auto;
   border-bottom: 2px solid rgb(129, 124, 124);
+}
+.cart_products_container::-webkit-scrollbar {
+  display: none;
 }
 /* ...............TOTAL AMOUNT RELATED CSS........................ */
 .total_amount {

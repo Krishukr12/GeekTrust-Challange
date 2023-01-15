@@ -4,10 +4,8 @@ import {
   ADDED_IN_CARD_FAIL,
   GET_CARD_PRODUCTS,
 } from "./actionType";
-
-// Add to Card Function
-let arr = JSON.parse(localStorage.getItem("cart")) || [];
-export const addToCart = (data) => {
+// Add to Card ACTION
+export const addToCart = (data, arr) => {
   let filter = arr.filter((item) => item.id === data.id);
   if (filter.length <= 0) {
     arr.push(data);
@@ -23,7 +21,7 @@ export const addToCart = (data) => {
   };
 };
 
-// GET PRODUCTS FUNCTION
+// GET PRODUCTS ACTION
 export const getProducts = async (dispatch) => {
   await fetch(
     "https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/catalogue.json",
@@ -43,7 +41,7 @@ export const getProducts = async (dispatch) => {
     });
 };
 
-//GET CART PRODUCTS FUNCTION
+//GET CART PRODUCTS ACTION
 
 export const getCartProducts = (data) => {
   return {

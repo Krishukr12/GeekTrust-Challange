@@ -5,8 +5,10 @@ import { useDispatch } from "react-redux";
 export const ProductCard = ({ data }) => {
   const dispatch = useDispatch();
   //ADD TO CARD HANDLER
-  const handleAddToCart = () => {
-    dispatch(addToCart(data));
+  const handleAddToCart = async () => {
+    let intilCartProducts =
+      (await JSON.parse(localStorage.getItem("cart"))) || [];
+    dispatch(addToCart(data, intilCartProducts));
   };
 
   return (
