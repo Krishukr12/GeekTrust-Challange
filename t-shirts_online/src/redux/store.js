@@ -9,6 +9,7 @@ const intialState = {
   products: [],
   cartProducts: [],
   searchProducts: [],
+  cartProductsCount: 0,
 };
 export const store = createStore(
   Reducer,

@@ -10,9 +10,9 @@ export const addToCart = (data, arr) => {
   if (filter.length <= 0) {
     arr.push(data);
     localStorage.setItem("cart", JSON.stringify(arr));
-    alert("Item Added to Cart");
     return {
       type: ADDED_IN_CARD_SUCCESS,
+      payload: arr.length,
     };
   }
   alert("Item Already Exist");

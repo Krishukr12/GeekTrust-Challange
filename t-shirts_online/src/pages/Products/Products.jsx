@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import classes from "../Products/Products.module.css";
 import { ProductCard } from "../../components/Product Card/ProductCard";
 import { getProducts } from "../../redux/action";
 import { useDispatch, useSelector } from "react-redux";
+import { ADDED_IN_CARD_SUCCESS } from "../../redux/actionType";
 export const Products = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
@@ -10,6 +11,15 @@ export const Products = () => {
   let data = searchProducts.length > 0 ? searchProducts : products;
 
   useEffect(() => {
+    const setIntialCartCount = async () => {
+      let intilCartProducts =
+        (await JSON.parse(localStorage.getItem("cart"))) || [];
+      dispatch({
+        type: ADDED_IN_CARD_SUCCESS,
+        payload: intilCartProducts.length,
+      });
+    };
+    setIntialCartCount();
     //GET PRODUCTS FUNCTION
     getProducts(dispatch);
   }, []);

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "../Navbar/Navbar.module.css";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 export const Navbar = () => {
+  const cartProductsCount = useSelector((state) => state.cartProductsCount);
   return (
     <div className={classes.nav_container}>
       <div className={classes.cart}>
@@ -15,7 +17,7 @@ export const Navbar = () => {
           Products
         </Link>
         <Link to="/cart">
-          {/* <div className={classes.count}>1</div> */}
+          <div className={classes.count}>{cartProductsCount}</div>
           <FiShoppingCart className={classes.cartIcons} size={"25px"} />
         </Link>
       </div>
