@@ -9,7 +9,6 @@ export const Cart = () => {
   const cartProducts = useSelector((state) => state.cartProducts);
   const totolCartPrice = useSelector((state) => state.totolCartPrice);
 
-
   useEffect(() => {
     const getInitialProducts = async () => {
       let intialProducts =
@@ -29,8 +28,6 @@ export const Cart = () => {
     setIntialCartCount();
   }, []);
 
-  
-
   return (
     <div className={classes.main_container}>
       <div className={classes.title}>
@@ -44,7 +41,7 @@ export const Cart = () => {
           : null}
       </div>
       <div className={classes.total_amount}>
-        <p>Total Amount : {totolCartPrice}</p>
+        <p>Total Amount : {totolCartPrice} ₹</p>
       </div>
     </div>
   );
